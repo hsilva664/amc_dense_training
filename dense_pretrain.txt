@@ -1,0 +1,6 @@
+python train_cifar.py dense_vgg --model vgg --seed 1234 --resume-training --save-network --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump
+python train_cifar.py dense_vgg --model vgg --seed 2234 --resume-training --save-network --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump
+python train_cifar.py dense_vgg --model vgg --seed 3234 --resume-training --save-network --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump
+python train_cifar.py dense_resnet --model resnet --seed 1234 --resume-training --save-network --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump
+python train_cifar.py dense_resnet --model resnet --seed 2234 --resume-training --save-network --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump
+python train_cifar.py dense_resnet --model resnet --seed 3234 --resume-training --save-network --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump
