@@ -33,6 +33,7 @@ parser.add_argument('--val-set-size', type=int, default=5000, help='how much of 
 parser.add_argument('--epochs', type=int, default=160, help='number of epochs to train (default: 40)')
 parser.add_argument('--pr-ft-epochs', type=int, default=40, help='number of fine-tuning epochs when pruning (default: 40)')
 parser.add_argument('--dump-pr', action='store_true', default=False, help='dump acc after pruning (before rewinding)')
+parser.add_argument('--pruned-path', type=str, help='path to pruned file')
 
 args = parser.parse_args()
 args.cuda = not args.no_cuda and torch.cuda.is_available()
@@ -84,11 +85,8 @@ def compute_remaining_weights():
     numel = 0.
 
     for m in model.prunable:
-        zeros += (m.weight.data == 0).sum()
-        numel += np.prod(m.weight.data.size())
-        if m.bias is not None:
-            zeros += (m.bias.data == 0).sum()
-            numel += np.prod(m.bias.data.size())           
+        zeros += (m.weight.data == 0).float().sum()
+        numel += np.prod(m.weight.data.size())         
 
     return 1 - zeros/numel  
 
@@ -99,7 +97,7 @@ def finish_run():
         # os.system("rm {}".format(os.path.join(path,'training_state_temp.tar')))
         os.system("touch {}".format(os.path.join(path,'end.txt')))
 
-def train(checkpoint, prune_fine_tuning_phase = False):
+def train(checkpoint, prune_fine_tuning_phase = False, masks = None):
     iterations_counter = 0
     remaining_weights = 1.
     if prune_fine_tuning_phase:
@@ -135,6 +133,11 @@ def train(checkpoint, prune_fine_tuning_phase = False):
 
             loss = F.cross_entropy(output, target)
             loss.backward()
+
+            if prune_fine_tuning_phase:
+                for m_i, m in enumerate(model.prunable):
+                    m.weight.grad = m.weight.grad * masks[m_i]
+
             optimizer.step()
 
             remaining_weights = compute_remaining_weights()
@@ -245,7 +248,19 @@ def dump_prune_routine():
     save_lr_sch = args.lr_schedule
     for i in range(len(args.lr_schedule)):
             args.lr_schedule[i] = -1
-    train(checkpoint, prune_fine_tuning_phase = True)        
+
+    assert os.path.isfile(args.pruned_path)
+
+    checkpoint = torch.load(args.pruned_path)
+
+    model.load_state_dict(checkpoint) 
+
+    masks = []
+    for m in model.prunable:
+        masks.append( (m.weight.data != 0.).float() )
+
+      
+    train(checkpoint, prune_fine_tuning_phase = True, masks = masks)        
 
     val_loss, val_acc, _ = test(val_loader)
     test_loss, test_acc, remaining_weights = test(test_loader)
@@ -255,7 +270,7 @@ def dump_prune_routine():
     os.fsync(pr_writeFile.fileno())   
     finish_run()
 
-if not prune_fine_tuning_phase:
+if not prune_fine_tuning_phase and not args.dump_pr:
     train(checkpoint, prune_fine_tuning_phase = False)
 
 if args.dump_pr:
