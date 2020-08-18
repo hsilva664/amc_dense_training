@@ -85,7 +85,7 @@ def compute_remaining_weights():
     numel = 0.
 
     for m in model.prunable:
-        zeros += (m.weight.data == 0).float().sum()
+        zeros += (m.weight.data == 0).float().sum().item()
         numel += np.prod(m.weight.data.size())         
 
     return 1 - zeros/numel  
