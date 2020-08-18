@@ -11,4 +11,4 @@ for seed in seeds:
         for model in models:
             exp_name = model + '_wrem_' + str(wrem)
             pruned_path = os.path.join('Logs',model,str(seed),'pruned_{}.tar'.format(wrem))
-            print 'train_cifar.py {exp_name} --model {model} --seed {seed} --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path {pruned_path}'.format(model=model, seed=seed, exp_name=exp_name, pruned_path=pruned_path)
+            print 'python train_cifar.py {exp_name} --model {model} --seed {seed} --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path {pruned_path}'.format(model=model, seed=seed, exp_name=exp_name, pruned_path=pruned_path)

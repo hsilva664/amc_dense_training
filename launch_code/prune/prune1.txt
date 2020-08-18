@@ -1,24 +1,24 @@
-train_cifar.py vgg_wrem_0.5 --model vgg --seed 1234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/vgg/1234/pruned_0.5.tar
-train_cifar.py resnet_wrem_0.5 --model resnet --seed 1234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/resnet/1234/pruned_0.5.tar
-train_cifar.py vgg_wrem_0.25 --model vgg --seed 1234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/vgg/1234/pruned_0.25.tar
-train_cifar.py resnet_wrem_0.25 --model resnet --seed 1234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/resnet/1234/pruned_0.25.tar
-train_cifar.py vgg_wrem_0.14 --model vgg --seed 1234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/vgg/1234/pruned_0.14.tar
-train_cifar.py resnet_wrem_0.14 --model resnet --seed 1234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/resnet/1234/pruned_0.14.tar
-train_cifar.py vgg_wrem_0.07 --model vgg --seed 1234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/vgg/1234/pruned_0.07.tar
-train_cifar.py resnet_wrem_0.07 --model resnet --seed 1234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/resnet/1234/pruned_0.07.tar
-train_cifar.py vgg_wrem_0.03 --model vgg --seed 1234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/vgg/1234/pruned_0.03.tar
-train_cifar.py resnet_wrem_0.03 --model resnet --seed 1234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/resnet/1234/pruned_0.03.tar
-train_cifar.py vgg_wrem_0.02 --model vgg --seed 1234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/vgg/1234/pruned_0.02.tar
-train_cifar.py resnet_wrem_0.02 --model resnet --seed 1234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/resnet/1234/pruned_0.02.tar
-train_cifar.py vgg_wrem_0.01 --model vgg --seed 1234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/vgg/1234/pruned_0.01.tar
-train_cifar.py resnet_wrem_0.01 --model resnet --seed 1234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/resnet/1234/pruned_0.01.tar
-train_cifar.py vgg_wrem_0.005 --model vgg --seed 1234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/vgg/1234/pruned_0.005.tar
-train_cifar.py resnet_wrem_0.005 --model resnet --seed 1234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/resnet/1234/pruned_0.005.tar
-train_cifar.py vgg_wrem_0.5 --model vgg --seed 2234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/vgg/2234/pruned_0.5.tar
-train_cifar.py resnet_wrem_0.5 --model resnet --seed 2234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/resnet/2234/pruned_0.5.tar
-train_cifar.py vgg_wrem_0.25 --model vgg --seed 2234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/vgg/2234/pruned_0.25.tar
-train_cifar.py resnet_wrem_0.25 --model resnet --seed 2234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/resnet/2234/pruned_0.25.tar
-train_cifar.py vgg_wrem_0.14 --model vgg --seed 2234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/vgg/2234/pruned_0.14.tar
-train_cifar.py resnet_wrem_0.14 --model resnet --seed 2234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/resnet/2234/pruned_0.14.tar
-train_cifar.py vgg_wrem_0.07 --model vgg --seed 2234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/vgg/2234/pruned_0.07.tar
-train_cifar.py resnet_wrem_0.07 --model resnet --seed 2234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/resnet/2234/pruned_0.07.tar
+python train_cifar.py vgg_wrem_0.5 --model vgg --seed 1234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/vgg/1234/pruned_0.5.tar
+python train_cifar.py resnet_wrem_0.5 --model resnet --seed 1234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/resnet/1234/pruned_0.5.tar
+python train_cifar.py vgg_wrem_0.25 --model vgg --seed 1234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/vgg/1234/pruned_0.25.tar
+python train_cifar.py resnet_wrem_0.25 --model resnet --seed 1234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/resnet/1234/pruned_0.25.tar
+python train_cifar.py vgg_wrem_0.14 --model vgg --seed 1234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/vgg/1234/pruned_0.14.tar
+python train_cifar.py resnet_wrem_0.14 --model resnet --seed 1234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/resnet/1234/pruned_0.14.tar
+python train_cifar.py vgg_wrem_0.07 --model vgg --seed 1234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/vgg/1234/pruned_0.07.tar
+python train_cifar.py resnet_wrem_0.07 --model resnet --seed 1234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/resnet/1234/pruned_0.07.tar
+python train_cifar.py vgg_wrem_0.03 --model vgg --seed 1234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/vgg/1234/pruned_0.03.tar
+python train_cifar.py resnet_wrem_0.03 --model resnet --seed 1234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/resnet/1234/pruned_0.03.tar
+python train_cifar.py vgg_wrem_0.02 --model vgg --seed 1234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/vgg/1234/pruned_0.02.tar
+python train_cifar.py resnet_wrem_0.02 --model resnet --seed 1234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/resnet/1234/pruned_0.02.tar
+python train_cifar.py vgg_wrem_0.01 --model vgg --seed 1234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/vgg/1234/pruned_0.01.tar
+python train_cifar.py resnet_wrem_0.01 --model resnet --seed 1234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/resnet/1234/pruned_0.01.tar
+python train_cifar.py vgg_wrem_0.005 --model vgg --seed 1234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/vgg/1234/pruned_0.005.tar
+python train_cifar.py resnet_wrem_0.005 --model resnet --seed 1234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/resnet/1234/pruned_0.005.tar
+python train_cifar.py vgg_wrem_0.5 --model vgg --seed 2234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/vgg/2234/pruned_0.5.tar
+python train_cifar.py resnet_wrem_0.5 --model resnet --seed 2234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/resnet/2234/pruned_0.5.tar
+python train_cifar.py vgg_wrem_0.25 --model vgg --seed 2234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/vgg/2234/pruned_0.25.tar
+python train_cifar.py resnet_wrem_0.25 --model resnet --seed 2234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/resnet/2234/pruned_0.25.tar
+python train_cifar.py vgg_wrem_0.14 --model vgg --seed 2234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/vgg/2234/pruned_0.14.tar
+python train_cifar.py resnet_wrem_0.14 --model resnet --seed 2234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/resnet/2234/pruned_0.14.tar
+python train_cifar.py vgg_wrem_0.07 --model vgg --seed 2234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/vgg/2234/pruned_0.07.tar
+python train_cifar.py resnet_wrem_0.07 --model resnet --seed 2234 --dump --dump-interval 10 --lr-schedule 80 120 --lr-drops 0.1 0.1 --dump-pr --pruned-path Logs/resnet/2234/pruned_0.07.tar
